@@ -190,6 +190,7 @@ export interface Article {
     };
     [k: string]: unknown;
   };
+  description?: string | null;
   image?: (number | null) | Media;
   publishedDate?: string | null;
   slug: string;
@@ -326,6 +327,7 @@ export interface ArticlesSelect<T extends boolean = true> {
   author?: T;
   subtitle?: T;
   content?: T;
+  description?: T;
   image?: T;
   publishedDate?: T;
   slug?: T;
