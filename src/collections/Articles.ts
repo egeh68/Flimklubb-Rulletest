@@ -36,6 +36,12 @@ export const Articles: CollectionConfig = {
       required: true,
     },
     {
+      name: "description",
+      type: "textarea",
+      label: "Kort beskrivelse",
+      required: false,
+    },
+    {
       name: "image",
       type: "upload",
       label: "Bildet",
@@ -53,7 +59,7 @@ export const Articles: CollectionConfig = {
     {
       name: "slug",
       type: "text",
-      label: "URL",
+      label: "Slug-URL",
       required: true,
       unique: true,
     },
