@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #002;
+  overflow: hidden;
+}
+
+.card .article-title {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.card .article-subtitle {
+  font-weight: bold;
+}
+
+.card p {
+  font-family: Arial, sans-serif;
+}

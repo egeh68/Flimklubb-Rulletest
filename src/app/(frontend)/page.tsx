@@ -1,11 +1,21 @@
-export default async function HomePage() {
+export default function HomePage() {
   return (
-    <main>
-      <h1>Velkommen til Payload CMS!</h1>
-      <p>
-        Rediger <code>@/src/app/(frontend)/page.tsx</code> for å gjøre om på
-        denne siden!
-      </p>
+    <main className="home">
+      <section className="home-hero">
+        <span className="home-label">Velkommen til Filmklubben Rulletekst</span>
+        <h1>
+          Film er slutt
+          <span> Samtalen begynner</span>
+        </h1>
+        <p>
+          Oppdag spennende filmanmeldelser, inspirerende artikler og kommende
+          filmkvelder. Hos oss møtes filmelskere for å dele opplevelser,
+          meninger og gode historier.
+        </p>
+        <a href="/articles" className="home-button">
+          utforsk article
+        </a>
+      </section>
     </main>
   );
 }
