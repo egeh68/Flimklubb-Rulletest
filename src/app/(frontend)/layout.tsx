@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles.css";
 import "@/components/Card/Card.css";
-
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 export const metadata = {
   title: "Filmklubben Rulletekst",
   description:
@@ -12,7 +13,11 @@ export default function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="no">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
