@@ -1,50 +1,70 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
+  padding: 0;
   background-color: #f6f2e9;
   color: #292721;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .home {
-  min-height: 100vm;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 40px 24px;
+  position: relative;
+  padding: 120px 24px 40px;
 }
+
 .home-label {
-  margin: 0;
-  color: #080808;
+  position: absolute;
+  top: 140px;
+  left: 20px;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 3px;
 }
 
 .home-hero {
-  color: #9c4d38;
-  font-size: 12px;
-  font: 700px;
-  letter-spacing: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 60px 0 28px;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.hero-content {
+  margin: 0;
 }
 .home-hero h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(40px, 6vw, 76px);
-
-  margin: 28px 0;
+  color: #9c4d38;
+  letter-spacing: 3px;
+  margin: 20px 0 28px;
 }
+
 .home-hero h1 span {
   display: block;
-  color: #9c4d38;
+  color: #292626;
   font-style: italic;
+  font-size: 0.4em;
 }
+
 .home-hero p {
-  color: black;
   max-width: 600px;
-  margin: 0 auto 32px;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .home-button {
@@ -59,18 +79,27 @@ body {
     background-color 0.2s ease,
     transform 0.2s ease;
 }
+
 .home-button:hover {
   background-color: #713524;
   transform: translateY(-2px);
 }
-@media (max-widh: 600px) {
+
+@media (max-width: 768px) {
   .home-hero {
-    padding: 48px 8px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
+
+  .home-label {
+    font-size: 16px;
+  }
+
   .home-hero h1 {
     letter-spacing: -1px;
   }
+
   .home-hero p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
