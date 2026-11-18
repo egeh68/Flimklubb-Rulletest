@@ -1,19 +1,18 @@
 import React from "react";
 import "./styles.css";
+import "@/components/Card/Card.css";
 
 export const metadata = {
-  description: "Et starterprosjekt for Payload CMS, bygget med Docker",
-  title: "Payload CMS",
+  title: "Filmklubben Rulletekst",
+  description:
+    "Filmen er slutt. Samtalen begynner. Les filmanmeldelser, artikler og oppdag kommende filmkvelder hos Filmklubben Rulletekst.",
 };
-
-export default async function RootLayout(props: { children: React.ReactNode }) {
+export default function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props;
 
   return (
     <html lang="no">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
-};
+}
